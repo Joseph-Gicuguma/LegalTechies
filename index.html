@@ -112,7 +112,8 @@
             <!-- ======= Single Post Content ======= -->
             <div class="single-post">
               <div class="post-meta"><span class="date">By: Tony Mutuma</span> <span class="mx-1">&bullet;</span>
-                <span>Nov 5th '22</span></div>
+                <span id="curtime"></span>
+              </div>
               <h1 class="mb-5">ARE CHARITABLE CHILDREN INSTITUTIONS INDISPENSABLE IN PROTECTION OF CHILDREN IN NEED OF
                 CARE AND PROTECTION IN KENYA?</h1>
               <p><span class="firstcharacter">T</span>he position of Kenya with regard to children rights prior to 1989
@@ -173,7 +174,10 @@
 
             <div class="text-center">
               <h2 class="page-title">Click here to watch our video</h2>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/oztfFpL2AcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/oztfFpL2AcY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
 
             <!-- End Single Post Content -->
@@ -603,6 +607,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById('curtime').innerHTML = today;
+
+  </script>
 
 </body>
 
